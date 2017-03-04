@@ -8,6 +8,7 @@ public class character{
     public int hp;
     public int critChange;
     public int dodgeChance;
+    public int resistChance;
 
     public character(String _name){
         name = _name;
@@ -15,6 +16,7 @@ public class character{
         hp = 30;
         critChange = 20; // percent
         dodgeChance = 30; // percent
+        resistChance = 10; // percent
     }
 
 
@@ -34,15 +36,19 @@ public class character{
 
         // Critical strike
         if (rand.nextInt(100) + 1 <= critChange) {
-            boolean critical = true;
             System.out.println("Critical strike!");
             modifier = 2; // Double the damage
         }
 
         // Dodge strike
         if (rand.nextInt(100) + 1 <= dodgeChance) {
-            boolean critical = true;
             System.out.println("Target dodges...");
+            modifier = 0; // Double the damage
+        }
+
+	    // Resist damage
+        if (rand.nextInt(100) + 1 <= resistChance) {
+            System.out.println("Target resists...");
             modifier = 0; // Double the damage
         }
 
