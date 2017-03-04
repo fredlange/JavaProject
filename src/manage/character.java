@@ -46,6 +46,8 @@ public class character{
             modifier = 0; // Double the damage
         }
 
+	// Resist damage
+
         return modifier;
     }
 
