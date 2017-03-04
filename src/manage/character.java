@@ -1,7 +1,6 @@
 package manage;
 import java.util.Random;
 
-
 public class character{
 
     public String name;
@@ -11,13 +10,11 @@ public class character{
     public int dodgeChance;
 
     public character(String _name){
-
         name = _name;
         status = "Alive";
         hp = 30;
         critChange = 20; // percent
         dodgeChance = 30; // percent
-
     }
 
 
@@ -53,9 +50,7 @@ public class character{
     }
 
     public void attack(character target){
-
         int baseDamage = 5;
-
         int damage = (int) Math.round(baseDamage * damageModifier());
         target.hp = target.hp - damage;
         if(target.hp < 1){
