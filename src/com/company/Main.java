@@ -37,6 +37,19 @@ public class Main {
     System.out.println(char2.name + " hp is " + char2.hp);
 
 
+    System.out.println(char1.name + " location is " + char1.location[0]);
+    System.out.println(char1.name + " location is " + char1.location[1]);
+    char1.move(2,1);
+    System.out.println(char1.name + " location is " + char1.location[0]);
+    System.out.println(char1.name + " location is " + char1.location[1]);
+
+    //char2.move(4,5);
+    System.out.println(char1.name + " distance to " + char2.name + " is " +
+        char1.scout(char2)
+    );
+
+    char1.attack(char2);
+
 
     }
 }
