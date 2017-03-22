@@ -6,16 +6,10 @@ public class character{
     public String name;
     private String status;
     public int hp;
-<<<<<<< HEAD
     private int critChange;
     private int dodgeChance;
     private int resistChance;
-=======
-    public int critChange;
-    public int dodgeChance;
-    public int resistChance;
-    public int [] location;
->>>>>>> 0c713f00d05ccecc0ac4a7d7bd668c67c5911720
+
 
     public character(String _name){
         name = _name;
