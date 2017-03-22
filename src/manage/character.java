@@ -4,12 +4,18 @@ import java.util.Random;
 public class character{
 
     public String name;
-    public String status;
+    private String status;
     public int hp;
+<<<<<<< HEAD
+    private int critChange;
+    private int dodgeChance;
+    private int resistChance;
+=======
     public int critChange;
     public int dodgeChance;
     public int resistChance;
     public int [] location;
+>>>>>>> 0c713f00d05ccecc0ac4a7d7bd668c67c5911720
 
     public character(String _name){
         name = _name;
@@ -48,7 +54,7 @@ public class character{
         return talk;
     }
 
-    public double damageModifier(){
+    private double damageModifier(){
         Random rand = new Random();
         float modifier = 1;
 
@@ -61,13 +67,21 @@ public class character{
         // Dodge strike
         if (rand.nextInt(100) + 1 <= dodgeChance) {
             System.out.println("Target dodges...");
+<<<<<<< HEAD
+            modifier = 0; // No damage
+=======
             modifier = 0; // Remove all damage
+>>>>>>> 0c713f00d05ccecc0ac4a7d7bd668c67c5911720
         }
 
 	    // Resist damage
         if (rand.nextInt(100) + 1 <= resistChance) {
             System.out.println("Target resists...");
+<<<<<<< HEAD
+            modifier = 0; // No damage
+=======
             modifier = 0; // Remove all damage
+>>>>>>> 0c713f00d05ccecc0ac4a7d7bd668c67c5911720
         }
 
         return modifier;
