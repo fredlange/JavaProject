@@ -4,11 +4,11 @@ import java.util.Random;
 public class character{
 
     public String name;
-    public String status;
+    private String status;
     public int hp;
-    public int critChange;
-    public int dodgeChance;
-    public int resistChance;
+    private int critChange;
+    private int dodgeChance;
+    private int resistChance;
 
     public character(String _name){
         name = _name;
@@ -30,7 +30,7 @@ public class character{
         return talk;
     }
 
-    public double damageModifier(){
+    private double damageModifier(){
         Random rand = new Random();
         float modifier = 1;
 
@@ -43,13 +43,13 @@ public class character{
         // Dodge strike
         if (rand.nextInt(100) + 1 <= dodgeChance) {
             System.out.println("Target dodges...");
-            modifier = 0; // Double the damage
+            modifier = 0; // No damage
         }
 
 	    // Resist damage
         if (rand.nextInt(100) + 1 <= resistChance) {
             System.out.println("Target resists...");
-            modifier = 0; // Double the damage
+            modifier = 0; // No damage
         }
 
         return modifier;
