@@ -1,2 +1,2 @@
-# JavaProject
-Just a testproject in java to try Git
+# Battle of the objects.
+Lets have some objects fight, and try out some object interactions.
