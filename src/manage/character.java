@@ -61,21 +61,13 @@ public class character{
         // Dodge strike
         if (rand.nextInt(100) + 1 <= dodgeChance) {
             System.out.println("Target dodges...");
-<<<<<<< HEAD
-            modifier = 0; // No damage
-=======
             modifier = 0; // Remove all damage
->>>>>>> 0c713f00d05ccecc0ac4a7d7bd668c67c5911720
         }
 
 	    // Resist damage
         if (rand.nextInt(100) + 1 <= resistChance) {
             System.out.println("Target resists...");
-<<<<<<< HEAD
-            modifier = 0; // No damage
-=======
             modifier = 0; // Remove all damage
->>>>>>> 0c713f00d05ccecc0ac4a7d7bd668c67c5911720
         }
 
         return modifier;
@@ -87,7 +79,7 @@ public class character{
         int damage = (int) Math.round(baseDamage * damageModifier());
         if(this.scout(target) < range){
             target.hp = target.hp - damage;
-            if(target.hp < 1){
+            if(target.hp <= 0){
                 target.status = "Dead";
             }
         }else{
