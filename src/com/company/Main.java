@@ -2,13 +2,11 @@ package com.company;
 
 
 import manage.character;
-import manage.testClass;
 
 public class Main {
 
     public static void main(String[] args) {
 	System.out.println("BATTLESIM - People will die \n");
-	testClass.printSomething("Manage your army and defeat others.");
 
 
 
